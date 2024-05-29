@@ -1,0 +1,26 @@
+# Directorios de Maven
+/target/
+
+# Archivos de configuración de IDEs
+.idea/
+*.iml
+.project
+.classpath
+.settings/
+
+# Directorios de sistemas operativos
+.DS_Store
+Thumbs.db
+
+# Archivos de logs
+/logs/
+/*.log
+
+# Archivos de configuración de ejecución
+*.env
+*.local
+
+# Archivos generados por empaquetado
+*.jar
+*.war
+*.ear

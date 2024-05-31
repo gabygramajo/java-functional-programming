@@ -18,4 +18,33 @@ La programación imperativa se trata de decirle a la computadora cómo lograr un
 #### Programación Declarativa
 - Programación Funcional.
 
+## Interfaces Funcionales
+Una interfaz funcional es una interfaz con un único método abstracto, adecuado para el uso con lambdas.
+
+
+Interfaces funcionales más comunes de usar del package [**java.util.function**](https://docs.oracle.com/javase/8/docs/api/java/util/function/package-summary.html):
+ 
+**Function<T, R>:**
+
+- Descripción: Representa una función que acepta un argumento y produce un resultado.
+- Método abstracto: R apply(T t)
+- Para mapear o transformar valores en un stream.
+
+**Predicate< T >:**
+
+- Descripción: Representa una función que acepta un argumento y devuelve un valor booleano.
+- Método abstracto: boolean test(T t)
+- Para filtrar elementos en una colección o stream.
+
+**Consumer < T >:**
+
+- Descripción: Representa una operación que acepta un único argumento y no devuelve resultado.
+- Método abstracto: void accept(T t)
+- Para realizar operaciones sobre cada elemento de una colección o stream, como imprimir o modificar.
+
+**Supplier <T>:**
+
+- Descripción: Representa una función que no acepta argumentos y produce un resultado.
+- Método abstracto: T get()
+- Para generar o proporcionar valores bajo demanda, como crear nuevas instancias.
 

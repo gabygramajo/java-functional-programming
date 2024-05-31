@@ -48,3 +48,75 @@ Interfaces funcionales más comunes de usar del package [**java.util.function**]
 - Método abstracto: T get()
 - Para generar o proporcionar valores bajo demanda, como crear nuevas instancias.
 
+## Stream
+
+La [**API Stream**](https://docs.oracle.com/javase%2F8%2Fdocs%2Fapi%2F%2F/java/util/stream/Stream.html) de Java proporciona un conjunto de operaciones que permiten procesar datos de forma declarativa y concisa.
+
+Algunas funciones:
+
+### filter:
+
+- Propósito: Filtra elementos de un stream.
+- Descripción: Toma un predicado (una condición booleana) y devuelve un nuevo stream que contiene solo los elementos que satisfacen esa condición.
+
+### map:
+
+- Propósito: Transforma elementos de un stream.
+- Descripción: Toma una función que transforma un elemento en otro y devuelve un nuevo stream que contiene los elementos transformados.
+
+### flatMap:
+
+- Propósito: Aplana y transforma elementos.
+- Descripción: Similar a map, pero cada elemento transformado puede producir múltiples elementos, que son aplanados en un único stream.
+
+### sorted:
+
+- Propósito: Ordena elementos de un stream.
+- Descripción: Devuelve un nuevo stream con los elementos ordenados de acuerdo a un comparador proporcionado.
+
+## distinct:
+
+- Propósito: Elimina duplicados.
+- Descripción: Devuelve un nuevo stream que contiene solo los elementos distintos (únicos) del stream original.
+
+### limit:
+
+- Propósito: Limita el tamaño del stream.
+- Descripción: Devuelve un nuevo stream que contiene no más de un número especificado de elementos del stream original.
+
+### skip:
+
+- Propósito: Salta elementos.
+- Descripción: Devuelve un nuevo stream que omite un número especificado de los primeros elementos.
+
+### collect:
+
+- Propósito: Acumula los elementos en una colección o una estructura de datos.
+- Descripción: Toma un Collector y acumula los elementos del stream en una colección, lista, conjunto, mapa u otra estructura de datos.
+
+### forEach:
+
+- Propósito: Realiza una acción en cada elemento.
+- Descripción: Toma un Consumer y aplica esa operación a cada elemento del stream. Principalmente se utiliza para operaciones finales como imprimir.
+
+### reduce:
+
+- Propósito: Combina elementos en un único valor.
+- Descripción: Toma una operación de reducción (como la suma o concatenación) y combina los elementos del stream en un solo valor.
+
+### anyMatch, allMatch, noneMatch:
+- Propósito: Verifica condiciones en los elementos.
+- Descripción: Evalúan predicados en los elementos del stream:
+  - **anyMatch**: Devuelve true si cualquier elemento cumple con el predicado.
+  - **allMatch**: Devuelve true si todos los elementos cumplen con el predicado.
+  - **noneMatch**: Devuelve true si ningún elemento cumple con el predicado.
+
+### findFirst, findAny:
+- Propósito: Encuentra elementos.
+- Descripción: Devuelven un Optional:
+  - **findFirst**: Encuentra el primer elemento del stream.
+  - **findAny**: Encuentra cualquier elemento del stream (útil en operaciones paralelas).
+
+### peek:
+- Propósito: Inspecciona elementos.
+- Descripción: Permite realizar una operación en cada elemento del stream sin modificar el stream en sí. Útil para depuración.
